@@ -4,10 +4,12 @@ import Home from './components/pages/Home'
 import Forms from './components/pages/Forms'
 import User from './components/pages/User'
 import Login from './components/pages/Login'
+import Table from "./components/pages/Table"
 import VueRouter from 'vue-router'
 import TextField from "./components/forms/TextField"
 import DropDown from "./components/forms/DropDown"
 import CheckBoxList from "./components/forms/CheckBoxList"
+import GenericTable from "./components/Table"
 import VueI18n from 'vue-i18n'
 import messages from "./localization/locale.json"
 import { ValidationProvider, extend, localize  } from 'vee-validate';
@@ -26,13 +28,15 @@ var routes = [
   { path: "/", component: Home },
   { path: "/forms", component: Forms },
   { path: "/users/:username", component: User },
-  { path: "/login", component: Login }
+  { path: "/login", component: Login },
+  { path: "/table", component: Table}
 ]
 
 Vue.component("TextField", TextField)
 Vue.component("DropDown", DropDown)
 Vue.component("CheckBoxList", CheckBoxList)
 Vue.component("ValidationProvider", ValidationProvider)
+Vue.component("GenericTable", GenericTable)
 
 const router = new VueRouter({
   routes // short for `routes: routes`

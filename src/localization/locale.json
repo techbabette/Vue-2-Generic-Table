@@ -1,0 +1,23 @@
+{
+    "sr" : {
+        "message": "Dobrodošli na nap websajt",
+        "nav": {
+            "subscribe": "Pretplata",
+            "logout": "Odjava"
+        }
+    },
+    "en": {
+        "message": "Welcome to our website",
+        "nav": {
+            "subscribe": "Subscribe",
+            "logout": "Logout"
+        }
+    },
+    "ja": {
+        "message": "私たちのウェブサイトへようこそ",
+        "nav": {
+            "subscribe": "購読",
+            "logout": "ログアウト"
+        }
+    }
+}

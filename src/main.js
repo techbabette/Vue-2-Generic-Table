@@ -11,6 +11,7 @@ import DropDown from "./components/forms/DropDown"
 import CheckBoxList from "./components/forms/CheckBoxList"
 import GenericTable from "./components/Table"
 import VueI18n from 'vue-i18n'
+import Axios from "axios"
 import messages from "./localization/locale.json"
 import { ValidationProvider, extend, localize  } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
@@ -53,6 +54,14 @@ const i18n = new VueI18n({
 
 Vue.config.productionTip = false
 
+let token = localStorage.getItem("token");
+const axiosInstance = Axios.create({
+  baseURL : "http://localhost:5101",
+  headers : {
+    "Authorization" : "Bearer " + token
+  }
+})
+Vue.prototype.$axios = axiosInstance;
 new Vue({
   router,
   i18n,

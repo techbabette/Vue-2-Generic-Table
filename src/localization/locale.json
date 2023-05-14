@@ -4,20 +4,35 @@
         "nav": {
             "subscribe": "Pretplata",
             "logout": "Odjava"
-        }
+        },
+        "table" : {
+            "Title" : "Naziv",
+            "Price" : "Cena",
+            "Shipping costs" : "Cena transporta"
+        } 
     },
     "en": {
         "message": "Welcome to our website",
         "nav": {
             "subscribe": "Subscribe",
             "logout": "Logout"
-        }
+        },
+        "table" : {
+            "Title" : "Title",
+            "Price" : "Price",
+            "Shipping costs" : "Shipping costs"
+        } 
     },
     "ja": {
         "message": "私たちのウェブサイトへようこそ",
         "nav": {
             "subscribe": "購読",
             "logout": "ログアウト"
-        }
+        },
+        "table" : {
+            "Title" : "名前",
+            "Price" : "価格",
+            "Shipping costs" : "輸送費"
+        } 
     }
 }

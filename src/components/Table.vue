@@ -3,7 +3,7 @@
         <table class="table table-striped" v-if="itemsExist">
             <thead>
                 <tr>
-                    <th v-for="key in headers" :key="key">{{ key }}</th>
+                    <th v-for="key in headers" :key="key">{{ $t("table." + key) }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -27,25 +27,29 @@ export default {
         },
         headerMap : {
             required : false,
-            type: Object
+            type: Array
         }
     },
     computed : {
         headers : function() {
+            let keys = [];
             if(this.headerMap){
-                return Object.keys(this.headerMap);
+                for(let elem of this.headerMap){
+                    keys.push(elem.Header);
+                }
+                return keys
             }
             if(this.itemsExist){
                 let firstItem = this.items[0]
                 return Object.keys(firstItem)
             }
-            return [];
+            return keys;
         },
         keys : function(){
             let keys = [];
             if(this.headerMap){
-                for(var key in this.headerMap){
-                    keys.push(this.headerMap[key]);
+                for(let elem of this.headerMap){
+                    keys.push(elem.Key);
                 }
                 return keys
             }

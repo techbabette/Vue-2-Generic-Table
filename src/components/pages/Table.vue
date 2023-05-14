@@ -23,18 +23,23 @@ export default {
         headerMap() {
             return [
                 {
-                    Header : "Price",
+                    Header : this.getTableLocale("Price"),
                     Key : "Cena"
                 },
                 {
-                    Header : "Title",
+                    Header : this.getTableLocale("Title"),
                     Key : "Naziv"
                 },
                 {
-                    Header : "Shipping costs",
+                    Header : this.getTableLocale("Shipping costs"),
                     Key : "Cena transporta"
                 }
             ]
+        }
+    },
+    methods : {
+        getTableLocale :function(title){
+            return this.$t("table."+title);
         }
     }
 }

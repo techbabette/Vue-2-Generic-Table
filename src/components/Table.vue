@@ -3,7 +3,7 @@
         <table class="table table-striped" v-if="itemsExist">
             <thead>
                 <tr>
-                    <th v-for="key in headers" :key="key">{{ $t("table." + key) }}</th>
+                    <th v-for="key in headers" :key="key">{{ key }}</th>
                 </tr>
             </thead>
             <tbody>
